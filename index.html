@@ -5,8 +5,8 @@
     </head>
     <body>   
         <header> 
-            <h1> Welcome to my first Website</h1>
-            <p> This is my awesome webpage where I'll share all about myself</p>
+            <h1> Sam Hashimi</h1>
+            <p> This is my webpage where I'll share about myself</p>
         </header>
         
         <nav> 
@@ -23,7 +23,7 @@
             <article>
                 <h4> Biography </h4>
                 <img src="images/myphoto.jpeg" alt = "This is what I look like" title="Sam" width="200"> 
-                <p> I have no idea what to say.</p>
+                <p> I have not done anything significant to have a bio.</p>
             </article>
 
             <article> 
@@ -73,14 +73,25 @@
                 </tbody>
             </table>
         </section>
-  
         
         <section id="contact">
-            <h3>Contact Me</h3>
-            <p>If you have any questions, feel free to reach out to me via email!</p>
-            <a href="mailto:samhashimi10@gmail.com" class="contact-button">Send me an email</a>
+            <h2>Contact Me</h2>
+            
+            <form action="mailto:samhashimi10@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+        
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email address"required><br><br>
+        
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        
+                <input type="submit" value="Send Message">
+            </form>
         </section>
-
+        
+        
         <footer>
             <p>Contact: <a href="mailto:samhashimi10@gmail.com">Samhashimi10@gmail.com</a></p>
             <p>&copy; 2024 Samandar Hashimi. All rights reserved.</p>
