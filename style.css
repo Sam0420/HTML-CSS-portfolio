@@ -4,55 +4,122 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-}
-
-/* Flexbox layout for the main body */
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    min-height: 80vh;
+    background-color: #f4f4f4;
 }
 
 /* Header styling */
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
     text-align: center;
+    padding: 20px 0;
 }
 
-/* Navigation bar */
+/* Flexbox for navigation */
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style: none;
     background-color: #444;
-    padding: 10px 0;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 2px solid #333;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #555;
+    border-radius: 5px;
 }
 
-/* Section styling */
+/* About section styling */
 section {
-    max-width: 900px;
-    margin: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: white;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section#about article {
+    margin-bottom: 30px;
+}
+
+section#about img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* Table for skills */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table td {
+    background-color: #f9f9f9;
+}
+
+/* Flexbox layout for the contact section */
+section#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 /* Footer styling */
@@ -60,40 +127,31 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-/* Heading styles */
-h1, h2 {
-    font-family: 'Georgia', serif;
-    color: #333;
+footer p {
+    margin: 10px 0;
 }
 
-/* Paragraph and link colors */
-p {
-    color: #555;
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
-a {
-    color: #007BFF;
+footer a:hover {
+    text-decoration: underline;
 }
 
-a:hover {
-    color: #0056b3;
-}
-
-
-/* For mobile screens */
+/* Responsive design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        align-items: center;
     }
 
     section {
-        width: 100%;
+        width: 90%;
+        margin: 20px auto;
     }
 }
